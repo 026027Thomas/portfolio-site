@@ -1,0 +1,19 @@
+main/admin.py
+
+python manage.py createsuperuser
+import email
+
+from django.contrib import admin
+from .models import Project, PersonalInformation
+
+admin.site.register(Project)
+admin.site.register(PersonalInformation)
+
+python manage.py createsuperuser
+
+create email
+
+print(username)  # Error: "username" is not defined
+
+def greet():
+    print(message)  # Error: "message" is not defined

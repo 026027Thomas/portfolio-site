@@ -1,0 +1,7 @@
+from django.shortcuts import get_object_or_404
+
+def testimony_detail(request, pk):
+    testimony = get_object_or_404(Testimony, pk=pk)
+    return render(request, 'testimony_detail.html', {
+        'testimony': testimony
+    })

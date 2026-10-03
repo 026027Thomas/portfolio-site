@@ -1,0 +1,10 @@
+def add_testimony(request):
+    if request.method == "POST":
+        form = TestimonyForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('testimony-list')
+    else:
+        form = TestimonyForm()
+
+    return render(request, 'add_testimony.html', {'form': form})

@@ -1,0 +1,7 @@
+from django.views.generic import ListView
+from .models import Testimony
+
+class TestimonyListView(ListView):
+    model = Testimony
+    template_name = "testimony_list.html"
+    context_object_name = "testimonies"
